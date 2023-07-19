@@ -353,7 +353,7 @@ header {
     border: none;
 } 
 .banner {
-    padding-top: 124px;
+    padding-top: 48px;
     padding-bottom: 48px;
 }
 .banner-wrapper {
@@ -2173,7 +2173,17 @@ footer {
     flex-wrap: wrap;
     align-items: center;
 }
-
+.digital-payments-main-container p {
+    overflow: hidden;
+    color: #F7F1FF;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: Actay-Regular, sans-serif;
+    font-size: 14px;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 0.28px;
+    margin-top: 8px;
+}
 
 
 
