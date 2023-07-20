@@ -1510,15 +1510,6 @@ header {
     height: 201.5px;
     position: relative;
 }
-.viban-account-tampl-section::after {
-    content: "";
-    width: 2px;
-    height: 80%;
-    background: #704FAD;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-}
 .viban-account-tampl-section:nth-last-of-type(1):after {
     content: none;
 }
@@ -1534,20 +1525,9 @@ header {
     margin-right: 24px;
 }
 .viban-account-tampl-section-number {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #704FAD;
-    border-radius: 90px;
-    color:#F7F1FF;
-    font-family:ActayWide-Bold, sans-serif;
-    font-size: 35px;
-    padding: 12px 16px;
-    box-sizing: border-box;
+   height: 100%;
 }
-.viban-account-tampl-section p{
+.viban-account-tampl-section > p{
     font-family: Actay-Regular, sans-serif;
     margin-left: 24px;
     color:#515151;
@@ -1556,7 +1536,7 @@ header {
     letter-spacing: 0.28px;
     width: 225px;
 }
-.viban-account-tampl-section p span {
+.viban-account-tampl-section > p span {
     color:#B08DE7;
     font-family:ActayWide-Bold, sans-serif;
     font-size: 14px;
@@ -1584,8 +1564,15 @@ header {
 .viban-account-tampl-section-flex {
     margin-left: 24px;
 }
-.viban-account-tampl-section-flex p {
+.viban-account-tampl-section-flex > p {
     margin-left: 0 !important;
+    font-family: Actay-Regular, sans-serif;
+    margin-left: 24px;
+    color: #515151;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.28px;
+    width: 225px;
 }
 .feedback {
     padding: 128px 0;
@@ -2202,8 +2189,39 @@ footer {
     display: flex;
     align-items: center;
 }
+.viban-account-tampl-section-number p {
+    display: flex;
+    min-width: 24px;
+    width: 48px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 45px;
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0;
+    color: #fff;
+    margin: 0;
+    border-radius: 45px;
+    background: #704FAD;
+}
 
-
+.viban-account-tampl-section-number {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 24px;
+}
+.viban-account-tampl-section-number span{
+    width: 2px;
+    height: 90%;
+    background: #704FAD;
+}
 
 
 
@@ -3063,31 +3081,15 @@ footer {
     }
     .viban-account-tampl-section h3 {
         font-size: 14px;
-        flex: 1 0 0;
         text-align: right;
         margin-right: 16px;
-        width: auto;
+        width: 178px;
         min-width: 120px;
     }
     .viban-account-tampl-section-number {
-        display: flex;
-        min-width: 24px;
-        width: 24px;
-        height: 24px;
-        padding: 12px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-        border-radius: 45px;
-        text-align: center;
-        font-size: 17.5px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        padding: 0;
+       height: 100%;
     }
-    .viban-account-tampl-section p {
+    .viban-account-tampl-section > p {
         font-size: 14px;
         margin-left: 8px;
         max-width: 216px;
@@ -3098,16 +3100,6 @@ footer {
     }
     .viban-account-tampl-section-flex {
         margin-left: 8px;
-    }
-    .viban-account-tampl-section::after {
-        content: "";
-        width: 2px;
-        height: 90%;
-        background: #704FAD;
-        position: absolute;
-        left: 58%;
-        bottom: 0;
-        transform: translateX(-50%);
     }
     .feedback {
         display: flex;
@@ -3671,8 +3663,44 @@ font-weight: 400;
 line-height: normal;
 line-height: 115%;
     }
-    .viban-account-tampl-section::after {
-        left: 54%;
+    .viban-account-tampl-section-number {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: 24px;
+    }
+    .viban-account-tampl-section-number span{
+        width: 2px;
+        height: 90%;
+        background: #704FAD;
+    }
+    .viban-account-tampl-section-number p {
+        display: flex;
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        padding: 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 45px;
+        text-align: center;
+        font-size: 17.5px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 0;
+        color: #fff;
+        margin: 0;
+        border-radius: 45px;
+        background: #704FAD;
+    }
+    .viban-account-tampl-section-flex {
+        font-size: 14px;
+    margin-left: 8px;
+    max-width: 216px;
+    width: auto;
     }
     
 }
@@ -3700,6 +3728,9 @@ line-height: 115%;
     }
     .transparent-pricing .wrapper {
         gap: 10px;
+    }
+    .viban-account-tampl-section-flex > p {
+        width: auto;
     }
 }
 
