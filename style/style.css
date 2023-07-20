@@ -2797,7 +2797,7 @@ footer {
     .banner-right {
         background: url(../image/banner-mobile.png), url(../image/banner-right-mobile.png);
         background-repeat: no-repeat;
-        background-size: 40%, cover;
+        background-size: 55%, cover;
         background-position: 50% 35%, center;
         height: 415px;
         min-width: 320px;
@@ -4109,7 +4109,7 @@ footer {
     }
 
     .banner-right {
-        background-size: 75%, cover;
+        background-size: 55%, cover;
     }
 
     .digital-payments-top p {
