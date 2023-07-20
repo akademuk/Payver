@@ -116,6 +116,43 @@ main {
     transition: all 0.5s;
 }
 
+
+
+.input-footer {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.input-footer:hover {
+    border: 1px solid #7957B5 !important;
+    transition: all 0.5s;
+}
+
+.input-footer:hover::placeholder {
+    color: #393939 !important;
+    transition: all 0.5s;
+}
+
+.input-footer:focus {
+    border: 1px solid #7957B5 !important;
+    transition: all 0.5s;
+}
+
+.input-footer:focus::placeholder {
+    color: #393939 !important;
+    transition: all 0.5s;
+}
+
+.input-footer:active {
+    border: 1px solid #7957B5 !important;
+    transition: all 0.5s;
+}
+
+.input-footer:active::placeholder {
+    color: #393939 !important;
+    transition: all 0.5s;
+}
+
 button {
     font-family: OpenSans, sans-serif;
     font-weight: 400;
@@ -919,8 +956,9 @@ header {
 }
 
 .banking-account .wrapper {
-    max-width: 1440px;
-    padding: 40px 162px 44px 162px;
+    max-width: 1116px;
+    padding: 40px 0 44px 0;
+    margin: 0 auto;
     box-sizing: border-box;
     background: url(../image/map.svg);
     background-repeat: no-repeat;
@@ -1127,11 +1165,8 @@ header {
 
 .transparent-pricing .wrapper {
     max-width: 1365px;
-    position: relative;
-    transform: translateX(-50%);
-    left: 56%;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
@@ -1872,14 +1907,14 @@ header {
     background: url(../image/tel.svg), #F3F3F3;
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 16px 10px;
+    background-position: 16px 12px;
 }
 
 .feedback .wrapper form .input-form:nth-of-type(3) {
     background: url(../image/mail.svg), #F3F3F3;
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 16px 10px;
+    background-position: 16px 12px;
 }
 
 .feedback .wrapper form .input-form::placeholder {
@@ -1926,7 +1961,7 @@ header {
     background: url(../image/submit.svg), #704FAD;
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 81px 11px;
+    background-position: 81px 14px;
     border: none;
     width: 123px;
     height: 52px;
@@ -1947,7 +1982,7 @@ header {
     background: url(../image/submit.svg), #9571D2;
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 81px 11px;
+    background-position: 81px 14px;
     transition: all 0.5s;
 }
 
@@ -1955,7 +1990,7 @@ header {
     background: url(../image/submit.svg), #5D4191;
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 81px 11px;
+    background-position: 81px 14px;
     transition: all 0.5s;
 }
 
@@ -2191,14 +2226,14 @@ footer {
     background: url(../image/tel.svg), #F3F3F3;
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 16px 10px;
+    background-position: 16px 12px;
 }
 
 .footer-right form .input-footer:nth-of-type(3) {
     background: url(../image/mail.svg), #F3F3F3;
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 16px 10px;
+    background-position: 16px 12px;
 }
 
 .footer-right form label .input-footer::placeholder {
@@ -2268,7 +2303,17 @@ footer {
 .popup {
     position: fixed;
     bottom: -100%;
-    right: 5%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    transition: all 0.5s;
+}
+.popup-content {
     display: flex;
     width: 546px;
     max-width: 546px;
@@ -2279,11 +2324,11 @@ footer {
     background: #403650;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
     transition: bottom 0.5s ease-in-out;
-    z-index: 100;
+    position: relative;
+    margin: 0 64px 64px 0;
 }
-
 .popup.open {
-    bottom: 100px;
+    bottom: 0;
 }
 
 .popup-close {
@@ -2519,6 +2564,9 @@ footer {
     margin: 0;
     border-radius: 45px;
     background: #704FAD;
+    font-family: Actay-Regular;
+    padding-top: 4px;
+    box-sizing: border-box;
 }
 
 .viban-account-tampl-section-number {
@@ -2680,10 +2728,7 @@ footer {
 
 
 @media (max-width: 1680px) {
-    .transparent-pricing .wrapper {
-        left: 0;
-        transform: none;
-    }
+
 
     .transparent-pricing-right-img-1 {
         height: 100%;
@@ -3069,7 +3114,7 @@ footer {
     }
 
     .digital-payments-main-container:hover p {
-        font-size: 12px;
+        font-size: 14px;
         transition: all 0.5s;
         height: 105px;
         overflow: hidden;
@@ -3170,7 +3215,7 @@ footer {
         gap: 16px;
         flex: 1 0 0;
         flex-wrap: wrap;
-        margin-top: 115px;
+        margin-top: 0;
     }
 
     .banking-account-right {
@@ -4035,7 +4080,8 @@ footer {
         flex-wrap: wrap;
     }
 
-    .popup {
+
+    .popup-content {
         display: flex;
         width: 288px;
         min-width: 288px;
@@ -4043,6 +4089,7 @@ footer {
         padding: 32px 32px 32px 16px;
         align-items: flex-start;
         right: 0;
+        margin: 0;
     }
 
     .popup.open {
@@ -4129,7 +4176,8 @@ footer {
         min-width: 121px;
         line-height: normal;
         width: 121px;
-        margin-bottom: 0px;
+        margin-bottom: 24px;
+        text-transform: none;
     }
 
     .card-payments-right p {
@@ -4139,6 +4187,7 @@ footer {
         min-width: 121px;
         line-height: normal;
         width: 121px;
+        text-transform: none;
     }
 
     .banking-account .wrapper {
@@ -4336,20 +4385,20 @@ footer {
     .viban-account-tampl-section-number p {
         display: flex;
         min-width: 24px;
+        min-height: 24px;
         width: 24px;
         height: 24px;
-        padding: 12px;
+        padding-top: 3px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 4px;
         border-radius: 45px;
         text-align: center;
-        font-size: 17.5px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        padding: 0;
         color: #fff;
         margin: 0;
         border-radius: 45px;
@@ -4428,13 +4477,48 @@ flex: 1 0 0;
     text-transform: uppercase;
     background-position: 18px 12px;
 }
+.card-payments-right h3 br {
+    display: none;
+}
+.card-payments-right p br{
+    display: none;
+}
+.banking-account .wrapper {
+    display: flex;
+min-width: 320px;
+max-width: 1199px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 32px;
+align-self: stretch;
+}
+.banking-account-right-position-container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    width: 56px;
+    height: 50px;
+}
+
 }
 
 @media (max-width: 576px) {
     .banking-account-left {
         margin-top: 34px;
     }
-
+    .digital-payments-main-container h3 {
+        font-size: 12px;
+        height: 48px;
+    }
+    .digital-payments-video-container {
+        width: calc(16% - 16px);
+    }
+    .banner-right {
+        background-size: 40%, cover;
+    }
     .banking-account-right-position {
         left: 32px;
     }
@@ -4442,16 +4526,10 @@ flex: 1 0 0;
     .banking-account-right {
         margin-top: 0;
     }
-
-    .banking-account-right-position-container-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1 0 0;
-        align-self: stretch;
-        width: 56px;
-        height: 50px;
+    .compliant {
+        background-position: -300px;
     }
+
 
     .transparent-pricing {
         padding-top: 50px;
@@ -4463,5 +4541,14 @@ flex: 1 0 0;
 
     .viban-account-tampl-section-flex>p {
         width: auto;
+    }
+}
+@media(max-width: 375px) {
+    .banner-right {
+        background-size: 66%, cover;
+    }
+    .compliant {
+        background: url(../image/svg-mob.svg), #7957B5;
+        background-repeat: no-repeat;
     }
 }
