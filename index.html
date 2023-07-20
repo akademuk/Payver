@@ -573,24 +573,24 @@
                         institution,
                         so you benefit from high security standards at all times.</p>
                 </div>
-                <form action="">
+                <form id="form1">
                     <h3>Get Started Now</h3>
                     <label for="name">
                         Name
                     </label>
-                    <input type="text" placeholder="Input placeholder" name="name" class="input-form">
+                    <input type="text" id="name1" placeholder="Input placeholder" name="name" class="input-form" required>
 
                     <label for="tel">
                         Phone
                     </label>
-                    <input type="tel" placeholder="Input placeholder" name="tel" class="input-form">
+                    <input type="tel" id="phone1" placeholder="Input placeholder" name="tel" class="input-form" required>
 
                     <label for="email">
                         Email
                     </label>
-                    <input type="email" placeholder="Input placeholder" name="email" class="input-form">
+                    <input type="email" id="email1" placeholder="Input placeholder" name="email" class="input-form" required>
 
-                    <input type="submit" class="submit" value="Send">
+                    <input type="submit" class="submit" name="submit" value="Send">
                 </form>
             </div>
         </section>
@@ -684,20 +684,20 @@
                     </div>
                     <div class="footer-right">
                         <h2>Get Started Now</h2>
-                        <form action="">
+                        <form id="form2">
                             <label for="name">
                                 Name
                             </label>
-                            <input type="text" placeholder="Input placeholder" name="name" class="input-footer">
+                            <input type="text" id="name2" placeholder="Input placeholder" name="name" class="input-footer" required>
                             <label for="tel">
                                 Phone
                             </label>
-                            <input type="tel" placeholder="Input placeholder" name="tel" class="input-footer">
+                            <input type="tel" id="phone2" placeholder="Input placeholder" name="tel" class="input-footer" required>
                             <label for="email">
                                 Email
                             </label>
-                            <input type="email" placeholder="Input placeholder" name="email" class="input-footer">
-                            <input type="submit" class="submit" value="Send">
+                            <input type="email" id="email2" placeholder="Input placeholder" name="email" class="input-footer" required>
+                            <input type="submit" class="submit" name="submit" value="Send">
                         </form>
                     </div>
                 </div>
@@ -719,7 +719,7 @@
                 </div>
             </div>
             <div class="footer-position">
-                <a href="#">
+                <a href="https://shapoval.agency/?utm_source=dev&utm_medium=site&utm_campaign=">
                     <img src="image/LabelAgency.svg" alt="shapoval agency">
                 </a>
             </div>
@@ -733,10 +733,13 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script/jquery.maskedinput.min.js"></script>
+    <script src="script/jquery.validate.min.js"></script>
     <script src="script/slick.js"></script>
     <script src="script/burger.js"></script>
     <script src="script/banner-slider.js"></script>
     <script src="script/popup.js"></script>
+    <script src="script/form-validation.js"></script>
 
 </body>
 
