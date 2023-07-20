@@ -2420,7 +2420,7 @@ footer {
     width: 100%;
     overflow: hidden;
     list-style-type: none;
-    transition: all 0.5s ease;
+    transition: all 0.5s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2461,8 +2461,7 @@ footer {
 
 .menu-items.active {
     max-height: 100vh;
-    /* Установите максимальную высоту вашего меню */
-    transition: all 0.5s ease;
+    transition: all 0.5s;
     padding: 102px 0;
 }
 
