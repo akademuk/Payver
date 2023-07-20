@@ -265,7 +265,7 @@ button {
     transition: all 0.5s;
 }
 header {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     height: 76px;
@@ -353,7 +353,7 @@ header {
     border: none;
 } 
 .banner {
-    padding-top: 48px;
+    padding-top: 124px;
     padding-bottom: 48px;
 }
 .banner-wrapper {
@@ -653,16 +653,19 @@ header {
 }
 .digital-payments-main-container:hover h3 {
     color: #F7F1FF;
-    transform: translateY(0px);
+    /* transform: translateY(-25px); */
+    transition: all 0.5s;
+}
+.digital-payments-main-container:hover p{
+    /* transform: translateY(-25px); */
     transition: all 0.5s;
 }
 .digital-payments-main-container img {
-    transform: translateY(65px);
     transition: all 0.5s;
 }
 .digital-payments-main-container:hover img {
     transition: all 0.5s;
-    transform: translateY(0);
+    /* transform: translateY(-20px); */
     filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(280deg) brightness(111%) contrast(160%);
 }
 .digital-payments-main .digital-payments-main-container:nth-of-type(5) {
@@ -697,14 +700,12 @@ header {
 }
 .digital-payments-main-container h3 {
     margin-top: 16px;
-    overflow: hidden;
     color:#272727;
     font-size: 14px;
     font-family:ActayWide-Bold, sans-serif;
     width: 80%;
     text-align: center;
     line-height: 110%;
-    transform: translateY(70px);
     transition: all 0.5s;
 }
 .card-payments {
@@ -1994,7 +1995,7 @@ footer {
 }
 
 .popup {
-    position: fixed;
+    position: absolute;
     bottom: -100%;
     right: 5%;
     display: flex;
@@ -2091,7 +2092,6 @@ footer {
     background: rgba(247, 241, 255, 0.85);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.10);
     width: 100%;
-    margin-top: 76px;
     overflow: hidden;
     list-style-type: none;
     transition: all 0.5s ease;
@@ -2179,17 +2179,29 @@ footer {
     text-align: center;
     text-overflow: ellipsis;
     font-family: Actay-Regular, sans-serif;
-    font-size: 14px;
+    font-size: 0;
     line-height: 140%; /* 19.6px */
     letter-spacing: 0.28px;
     margin-top: 8px;
+    overflow: hidden;
+}
+.digital-payments-main-container {
+    justify-content: center;
+}
+.digital-payments-main-container:hover {
+    padding-top: 8px;
 }
 
-
-
-
-
-
+.digital-payments-main-container:hover p{
+        font-size: 12px;
+        transition: all 0.5s;
+        height: 100%;
+        overflow: hidden;
+}
+.features-top-flex {
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -2411,8 +2423,24 @@ footer {
     .header-navigation {
         display: none;
     }
+    header {
+        padding: 0 32px;
+    }
     .header-group-button {
         display: none;
+    }
+    .logo {
+        width: 113px;
+        height: 48px;
+    }
+    .logo a {
+        width: 100%;
+        height: 100%;
+    }
+    .logo a img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
     .digital-payments-main-container {
         height: 200px;
@@ -2446,11 +2474,11 @@ footer {
         display: flex !important;
     }
     .banner {
-        padding: 0 0 64px 0;
+        padding: 76px 0 64px 0;
     }
     .banner-left {
         border-radius: 0;
-        margin-right: 16px !important;
+        margin-right: 0!important;
     }
     .banner-item {
         border-radius: 0;
@@ -2476,8 +2504,9 @@ footer {
         max-width: min-content;
     }
     .digital-payments-top p {
-        font-size: 14px;
+        font-size: 12px !important;
         min-width: 256px;
+        width: 100%;
     }
     .digital-payments-top button {
         margin-left: 0;
@@ -2507,18 +2536,19 @@ footer {
     .digital-payments {
         padding-bottom: 64px;
     }
-    .card-payments .wrapper {
-        padding-left: 32px;
+    .card-payments-left {
+        padding: 32px;
+        box-sizing: border-box;
     }
     .card-payments-left {
         display: flex;
         min-width: 320px;
         max-width: 720px;
-        padding: 32px;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 0 16px;
+        gap: 16px;
+        padding-top: 32px;
         flex: 1 0 0;
     }
     .card-payments-left button {
@@ -2551,9 +2581,1216 @@ footer {
         align-items: flex-start;
         flex: 1 0 0;
     }
+    .digital-payments-main-container p {
+        font-size: 0;
+    }
+    .digital-payments-main-container:hover p {
+        font-size: 12px;
+        transition: all 0.5s;
+        height: 105px;
+        overflow: hidden;
+    }
+    .card-payments-img-mobile {
+        display: block;
+    }
+    .card-payments-img-desctop {
+        display: none;
+    }
+    .card-payments-left h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    .card-payments-left p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .card-payments-container-img {
+        width: 60px;
+        height: 32px;
+    }
+    .card-payments-right-position img {
+        object-fit: cover;
+        object-position: left;
+    }
+    .card-payments-right {
+        align-items: flex-end;
+    }
+    .digital-payments-main-container {
+        transition: all 0.5s;
+        background: #704FAD;
+        justify-content: flex-start;
+    }
+    .digital-payments-main-container img {
+        filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(280deg) brightness(111%) contrast(160%);
+        transform: translateY(0) !important;
+    }
+    .digital-payments-main-container h3 {
+        transform: translateY(0) !important;
+        color: #fff;
+        overflow: hidden;
+  text-overflow: ellipsis;
+  height: 71px;
+    }
+    .digital-payments-main-container p {
+        font-size: 12px;
+    transition: all 0.5s;
+    height: 105px;
+    overflow: hidden;
+    }
+    .banking-account {
+        padding: 0;
+    }
+    .banking-account .wrapper{
+        padding: 48px 32px;
+        background-position: center;
+    }
+    .banking-account-top h2 {
+        font-size: 17px;
+        min-width: 256px;
+        flex-grow: 1;
+    }
+    .banking-account-top h2 br {
+        display: none;
+    }
+    .banking-account-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 64px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .banking-account-left {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+        flex-wrap: wrap;
+        margin-top: 115px;
+    }
+    .banking-account-right {
+        display: flex;
+        width: 320px;
+        min-width: 320px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banking-account-right-img img {
+        object-fit: contain;
+    }
+    .banking-account-left-card {
+        display: flex;
+        min-width: 256px;
+        padding: 16px;
+        align-items: center;
+        flex: 1 0 0;
+    }
+    .banking-account-right {
+        margin-top: 32px;
+        height: 434px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .banking-account-right-img {
+        height: 434px;
+    }
+    .banking-account-right-img img {
+        object-position: bottom;
+    }
+    .banking-account-top button {
+        width: 183px;
+        height: 44px;
+        font-size: 14px;
+        white-space: nowrap;
+        padding-left: 20px;
+        background-position: 138px 10px;
+    }
+    .transparent-pricing {
+        padding: 64px 32px;
+    }
+    .compliant {
+        position: relative;
+        transform: none;
+        margin-top: 64px;
+        left: 0;
+        padding: 102px 16px 24px 16px;
+        background-size: cover;
+        background-position: -50px;
+    }
+    .compliant-container-position {
+        left: 16px;
+        width: 65px;
+        height: 25px;
+    }
+    .compliant-container-position img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .compliant-container-right {
+        display: flex;
+        min-width: 224px;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex: 1 0 0;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .compliant-container {
+        align-items: center;
+    }
+    .compliant-container-right-section:nth-last-of-type(1) {
+        padding-top: 0;
+    }
+    .compliant-container-right-section {
+        display: flex;
+        min-width: 224px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0 8px;
+        flex: 1 0 0;
+    }
+    .compliant-container-right-section h4 {
+        font-size: 14px;
+        margin-bottom: 8px;
+        width: auto;
+    }
+    .compliant-container-right-section {
+        border-bottom: none;
+    }
+    .transparent-pricing-left {
+        margin-top: 0;
+    }
+    .compliant-container-left h2 {
+        min-width: 224px;
+        max-width: 224px;
+        flex: 1 0 0;
+        font-size: 20px;
+    }
+    .compliant-container-left {
+        min-width: auto;
+    }
+    .transparent-pricing-left h2 {
+        font-size: 17px;
+        margin-bottom: 32px;
+    }
+    .transparent-pricing-left-container-card {
+        display: flex;
+        height: 60px;
+        min-width: 176px;
+        align-items: flex-start;
+        gap: 0px;
+        flex: 1 0 0;
+        margin-bottom: 0;
+    }
+    .transparent-pricing-left-container-card h3 {
+        line-height: 150%;
+    }
+    .transparent-pricing-left-container-card {
+        margin-bottom: 18px;
+    }
+    .transparent-pricing-left-container-card:nth-last-of-type(1) {
+        margin-bottom: 0 !important;
+    }
+    .transparent-pricing-left button {
+        margin-top: 23px;
+    }
+    .transparent-pricing .wrapper {
+        padding: 0;
+    }
+    .transparent-pricing-left {
+        display: flex;
+        min-width: 256px;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1 0 0;
+    }
+    .transparent-pricing-right {
+        width: 256px;
+        height: 210.286px;
+        margin-top: 22px;
+    }
+    .transparent-pricing-left-container-card-img {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+    .banner-wrapper {
+        display: flex;
+        min-width: 320px;
+        max-width: 1199px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .transparent-pricing-left-container-card h3 {
+        font-size: 14px;
+    }
+    .features {
+        padding: 64px 32px;
+    }
+    .features-top h2 {
+        font-size: 17px;
+        min-width: 256px;
+        flex: 1 0 0;
+        max-width: max-content;
+    }
+    .features-top {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 0 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+    }
+    .features-top p {
+        margin-left: 0;
+        min-width: 256px;
+        max-width: 367px;
+        flex: 1 0 0;
+        font-size: 14px;
+    }
+    .features-top button {
+        margin-left: 16px;
+        width: 115px;
+        height: 44px;
+        padding-left: 20px;
+        white-space: nowrap;
+        background-position: 75px 10px;
+    }
+    .features-top-flex {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+        flex-wrap: wrap;
+    }
+    .features-main-top-left-card:after {
+        content: none !important;
+    }
+    .features-main-top-left-card:before {
+        content: none !important;
+    }
+    .features-main-top {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .features-main-top-left {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+    }
+    .features-main-top-right {
+        min-width: 256px;
+        min-height: 320px;
+        max-height: 512px;
+        flex: 1 0 0;
+        align-self: stretch;
+    }
+    .features-main-top-right-img {
+        height: 100%;
+    }
+    .features-main-top-left-card {
+        display: flex;
+        min-width: 256px;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0 16px;
+        flex: 1 0 0;
+        width: auto;
+    }
+    .features-main-top-left-card:nth-of-type(4) {
+        padding-left: 16px;
+    }
+    .features-main-top-left-card:nth-of-type(2) {
+        padding-left: 16px;
+    }
+    .features-main-top-right-flex {
+        display: flex;
+        width: 224px;
+        min-width: 150px;
+        max-width: 344px;
+        padding: 16px;
+        align-items: flex-start;
+    }
+    .features-main-bottom-left-card:after {
+        content: none !important;
+    }
+    .features-main-bottom-left-card:before {
+        content: none !important;
+    }
+    .features-main-bottom {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .features-main-bottom-left {
+        min-width: 256px;
+        min-height: 320px;
+        max-height: 512px;
+        flex: 1 0 0;
+        align-self: stretch;
+    }
+    .features-main-bottom-right-flex {
+        display: flex;
+        width: 224px;
+        min-width: 150px;
+        max-width: 344px;
+        padding: 16px;
+        align-items: flex-start;
+    }
+    .features-main-bottom-right-img {
+        height: 100%;
+    }
+    .features {
+        padding-bottom: 32px;
+        background: #FFF;
+    }
+    .features-main-bottom-right {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+    }
+    .features-main-bottom-left-card {
+        display: flex;
+        min-width: 256px;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0 16px;
+        flex: 1 0 0;
+        width: auto;
+    }
+    .banking-account-top {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .banking-account-left {
+        width: auto;
+    }
+    .digital-payments-top {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .viban-account {
+        padding: 64px 32px;
+        box-sizing: border-box;
+    }
+    .viban-account .wrapper h2 {
+        font-size: 17px;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .viban-account .wrapper h2 span{
+        font-size: 17px;
+    }
+    .viban-account .wrapper > p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .viban-account .wrapper > button {
+        width: 183px;
+        height: 44px;
+        padding-left: 20px;
+        white-space: nowrap;
+        font-size: 14px;
+        background: url(../image/message-white.svg), #704FAD;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 140px 8px;
+    }
+    .viban-account-tampl {
+        margin-top: 48px;
+        display: flex;
+        height: 426px;
+        max-width: 512px;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        margin: 48px auto 0 auto;
+    }
+    .viban-account {
+        display: flex;
+        min-width: 320px;
+        max-width: 1199px;
+        padding: 64px 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .viban-account .wrapper {
+        width: 100%;
+    }
+    .viban-account-tampl-section {
+        display: flex;
+        min-height: 185px;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+    .viban-account-tampl-section h3 {
+        font-size: 14px;
+        flex: 1 0 0;
+        text-align: right;
+        margin-right: 16px;
+        width: auto;
+        min-width: 120px;
+    }
+    .viban-account-tampl-section-number {
+        display: flex;
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        padding: 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 45px;
+        text-align: center;
+        font-size: 17.5px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding: 0;
+    }
+    .viban-account-tampl-section p {
+        font-size: 14px;
+        margin-left: 8px;
+        max-width: 216px;
+        width: auto;
+    }
+    .viban-account-tampl-section button {
+        display: none;
+    }
+    .viban-account-tampl-section-flex {
+        margin-left: 8px;
+    }
+    .viban-account-tampl-section::after {
+        content: "";
+        width: 2px;
+        height: 90%;
+        background: #704FAD;
+        position: absolute;
+        left: 58%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+    .feedback {
+        display: flex;
+        min-width: 320px;
+        max-width: 1199px;
+        padding: 64px 32px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 8px;
+        align-self: stretch;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .feedback-top {
+        display: flex;
+        min-width: 256px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        border-bottom: 0;
+        flex: 1 0 0;
+        margin-bottom: 32px;
+        padding-bottom: 0;
+    }
+    .feedback .wrapper {
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 32px 16px;
+        flex: 1 0 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .feedback-top p {
+        margin-left: 0;
+        font-size: 17px;
+    }
+    .feedback-top-logo {
+        width: 118.005px;
+        height: 42.5px;
+        min-width: 118.005px;
+        
+    }
+    .feedback-content h3 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .feedback-content p {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .feedback .wrapper form {
+        display: flex;
+        min-width: 256px;
+        max-width: 512px;
+        padding: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        flex: 1 0 0;
+    }
+    .feedback .wrapper form h3 {
+        margin-bottom: 32px;
+    }
+    .feedback .wrapper {
+        align-items: flex-start;
+    }
+    .feedback-content {
+        display: flex;
+        min-width: 256px;
+        max-width: 512px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px 0;
+        width: auto;
+        flex: 1 0 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    .multicurrency {
+        display: flex;
+        min-width: 320px;
+        max-width: 1199px;
+        padding: 64px 32px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        align-self: stretch;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    .multicurrency .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        align-self: stretch;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .multicurrency-left {
+        display: flex;
+        min-width: 256px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+        margin-right: 11px;
+    }
+    .multicurrency-right {
+        width: 256px;
+        height: 217px;
+    }
+    .multicurrency-left h2 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .multicurrency-left p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .multicurrency-left-flex button:nth-of-type(1) {
+        width: 238px;
+        height: 39px;
+        background:#704FAD;
+        font-size: 14px;
+        padding: 0;
+        padding-left: 20px;
+        white-space: nowrap;
+        margin-bottom: 8px;
+    }
+    .multicurrency-left-flex button:nth-of-type(2) {
+        height: 39px; 
+        font-size: 14px;
+        width: 160px;
+        padding: 0;
+        text-align: left;
+        padding-left: 52px;
+        white-space: nowrap;
+        background-position: 16px 5px;
+    }
+    .multicurrency-left-flex {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    footer {
+        display: flex;
+        min-width: 320px;
+        max-width: 1199px;
+        padding: 64px 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        box-sizing: border-box;
+    }
+    .footer-right {
+        display: none;
+    }
+    .footer-left {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 24px 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .footer-left-top {
+        display: flex;
+        min-width: 256px;
+        max-width: 559px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+    .footer-left-top-flex {
+        display: flex;
+        min-width: 256px;
+        max-width: 559px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+    .footer-left-top-flex2 {
+        display: flex;
+        min-width: 256px;
+        max-width: 560px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 24px 16px;
+        flex: 1 0 0;
+        flex-wrap: wrap;
+    }
+    .footer-left-top-flex2 {
+        gap: 16px !important;
+    }
+    .footer-left-bottom {
+        display: flex;
+        min-width: 256px;
+        max-width: 560px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 24px 16px;
+        flex: 1 0 0;
+        flex-wrap: wrap;
+    }
+    .footer-left-top h2 {
+        font-size: 17px;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .footer-left-top-flex ul {
+        display: flex;
+        min-width: 256px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+    .footer-left-top-flex ul li {
+        margin-bottom: 0;
+    }
+    .footer-left-top-flex2 ul {
+        display: flex;
+        min-width: 256px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+    .footer-left-top-flex2 > div {
+        display: flex;
+        min-width: 256px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+    .footer-left-top-flex2 {
+        gap: 0 16px;
+    }
+    .footer-left-top-flex2 ul li:nth-of-type(1) {
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+    .footer-left-top-flex2 ul li:nth-of-type(1) {
+        font-size: 17px;
+        height: auto;
+        line-height: 100%;
+    }
+    .footer-left-top-flex2 > div h2 {
+        font-size: 17px;
+        height: auto;
+        line-height: 100%;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+    .footer-left-top-flex {
+        margin-bottom: 0;
+    }
+    .footer-flex {
+        margin-bottom: 64px;
+    }
+    .footer-bottom {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: 4px 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .footer-bottom-logo {
+        width: 95px;
+        min-width: 95px;
+        height: 35px;
+        margin-right: 16px;
+    }
+    .footer-bottom p {
+        font-size: 10px;
+        min-width: 256px;
+        max-width: 1024px;
+        flex: 1 0 0;
+    }
+    .compliant-container {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .transparent-pricing .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 32px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .card-payments .wrapper {
+        display: flex;
+        min-width: 320px;
+        max-width: 1199px;
+        align-items: center;
+        align-content: center;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .digital-payments-top-flex {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        flex: 1 0 0;
+        flex-wrap: wrap;
+    }
+    .popup {
+        display: flex;
+        width: 288px;
+        min-width: 288px;
+        max-width: 546px;
+        padding: 32px 32px 32px 16px;
+        align-items: flex-start;
+        right: 0;
+    }
+    .popup.open {
+        bottom: 0;
+        right: 0;
+    }
+    .banner-item-left h2 {
+        line-height: 128%;
+    }
+    .banner-item-left p {
+        line-height: 125%;
+    }
+    .banner-right > span {
+        margin-bottom: 4px;
+    }
+    .banner-right {
+        background-size: 75%, cover;
+    }
+    .digital-payments-top p {
+        font-size: 14px !important; 
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: 0.28px;
+    }
+    .digital-payments-top button {
+        width: 176px;
+        height: 44px;
+        white-space: nowrap;
+        padding-left: 20px;
+        font-size: 14px;
+        background-position: 131px;
+    }
+    .digital-payments-main-container {
+        margin-bottom: 16px;
+    }
+    .digital-payments-main .digital-payments-main-container:nth-of-type(5) {
+        margin-bottom: 16px !important;
+    }
+    .card-payments-left h2 {
+        line-height: 130%;
+        margin-bottom: 0;
+    }
+    .card-payments-left p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: 0.28px;
+        margin-bottom: 0;
+    }
+    .card-payments-left button {
+        width: 195px;
+        height: 44px;
+        white-space: nowrap;
+        padding-left: 20px;
+        font-size: 14px;
+        background-position: 150px; 
+        margin-top: 0;
+    }
+    .card-payments-right-logo {
+        width: 143.003px;
+        height: 26px;
+    }
+    .card-payments-right h3 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        min-width: 121px;
+        line-height: normal;
+        width: 121px;
+        margin-bottom: 0px;
+    }
+    .card-payments-right p {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        min-width: 121px;
+        line-height: normal; 
+        width: 121px;
+    }
+    .banking-account .wrapper {
+        padding-top: 40px;
+    }
+    .banking-account-left-card{
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        flex-wrap: wrap;
+    }
+    .banking-account-left-card-text h3 {
+        line-height: 120%;
+        margin-bottom: 9px;
+    }
+    .banking-account-left-card {
+      
+       margin-bottom: 0;
+    }
+    .banking-account-right-position {
+        display: flex;
+        width: 256px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .features-top p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: 0.28px;
+        margin-bottom: 20px;
+    }
+    .features-top button {
+        margin-left: 0;
+    }
+    .features-main-top-left-card {
+        padding: 24px !important;
+    }
+    .features-main-top-left-card:nth-of-type(3) {
+        margin-top: 0;
+    }
+    .features-main-top-left-card:nth-of-type(4) {
+        margin-top: 0;
+    }
+    .features-main-top-right-flex {
+        left: 16px;
+        bottom: 16px;
+    }
+    .features-main-bottom-left {
+        display: flex;
+        width: 256px;
+        height: 320px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .features-main-bottom-right-flex {
+        left: 16px;
+        bottom: 16px;
+    }
+    .features-main-bottom-right-avatar {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+    .features-main-bottom-left-card:nth-of-type(3) {
+        margin-top: 0;
+    }
+    .features-main-bottom-left-card:nth-of-type(4) {
+        margin-top: 0;
+    }
+    .features-main-bottom-left-card {
+        height: auto;
+    }
+    .features-main-bottom-right {
+        gap: 20px;
+    }
+    .viban-account .wrapper > p {
+        line-height: 130%;
+    }
+    .viban-account-tampl {
+        margin-top: 54px;
+    }
+    .viban-account-tampl-section h3 {
+        line-height: 130%;
+    }
+    .feedback .wrapper {
+        gap: 8px 16px;
+    }
+    .feedback .wrapper form h3 {
+        margin-bottom:43px;
+    }
+    .multicurrency h2{
+        line-height: 120%;
+    }
+    .multicurrency {
+        padding-left: 42px;
+        padding-bottom: 83px;
+    }
+    .multicurrency-left p {
+        font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+letter-spacing: 0.28px;
+    }
+    .multicurrency-left-flex button:nth-of-type(2) {
+        height: 44px;
+    }
+    .footer-left-top-flex {
+        gap: 10px;
+    }
+    .footer-left-top-flex ul {
+        gap: 10px;
+    }
+    .footer-left-top-flex2 ul {
+        display: flex;
+        min-width: 256px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+    .footer-left-top-flex2 {
+        display: flex;
+min-width: 256px;
+max-width: 560px;
+align-items: flex-start;
+align-content: flex-start;
+gap: 6px 16px !important;
+flex: 1 0 0;
+flex-wrap: wrap;
+    }
+    .footer-bottom {
+        gap: 2px 16px;
+    }
+    .footer-bottom p {
+        font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+line-height: 115%;
+    }
+    .viban-account-tampl-section::after {
+        left: 54%;
+    }
+    
+}
+@media (max-width: 576px) {
+    .banking-account-left {
+        margin-top: 34px;
+    }
+    .banking-account-right-position {
+        left: 32px;
+    }
+    .banking-account-right {
+        margin-top: 0;
+    }
+    .banking-account-right-position-container-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 0;
+        align-self: stretch;
+        width: 56px;
+        height: 50px;
+    }
+    .transparent-pricing {
+        padding-top: 50px;
+    }
+    .transparent-pricing .wrapper {
+        gap: 10px;
+    }
 }
 
-
+/* @media (max-width: 768px) {
+    .card-payments-right-position img {
+        object-position: right;
+        object-fit: contain;
+    }
+    .card-payments {
+        background: url(../image/card-payments-mobile.svg) !important;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 0 83%;
+        padding: 0;
+        padding-top: 48px;
+        align-items: center;
+    }
+    .card-payments-right-position {
+        top: 48px;
+    }
+    .card-payments-right-position img {
+        object-position: left;
+        object-fit: cover;
+    }
+    .card-payments-right-logo {
+        margin-top: 80px;
+    }
+    .card-payments-right-position img {
+        object-position: left;
+        object-fit: fill;
+    }
+    .card-payments .wrapper {
+        flex-direction: column;
+    }
+    
+    .card-payments-right {
+        align-items: center;
+        max-width: 100%;
+    }
+    .card-payments {
+        height: auto;
+    }
+    .card-payments-left {
+        padding: 32px 32px 0px 32px;
+    }
+    .card-payments-left h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    .card-payments-left p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .card-payments-container-img {
+        margin-bottom: 8px;
+    }
+    .card-payments-container {
+        margin-bottom: 8px;
+    }
+    .card-payments-right {
+        height: 400px;
+        width: 100%;
+    }
+    .card-payments-right-logo {
+        width: 143px;
+        height: 26px;
+        margin-bottom: 21px;
+    }
+    .card-payments-right h3 {
+        font-size: 20px;
+        min-width: 121px;
+        margin-bottom: 24px;
+        margin-left: 40px;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+    .card-payments-right p {
+        font-size: 20px;
+        min-width: 121px;
+        width: 22%;
+        margin-left: 40px;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+    .card-payments-right p br {
+        display: none;
+    }
+    .card-payments .wrapper {
+        padding-left: 0;
+    }
+} */
 /* @media (max-width: 768px) {
     .popup {
         min-width: 288px;
@@ -2643,17 +3880,11 @@ footer {
 } */
 
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     .banner {
         padding-left: 0;
         padding-right: 0;
         overflow: hidden;
-    }
-    .card-payments-img-mobile {
-        display: block;
-    }
-    .card-payments-img-desctop {
-        display: none;
     }
     .banner-left {
         margin-right: 0;
@@ -2672,6 +3903,9 @@ footer {
         width: 100%;
         max-width: 100%;
         margin-bottom: 16px;
+    }
+    .card-payments-right-position img {
+        object-fit: cover;
     }
     .digital-payments-main-container:nth-last-of-type(1) {
         margin-bottom: 16px;
@@ -3316,4 +4550,4 @@ height: 28px;
     .card-payments-container-img img {
         object-fit: contain;
     }
-}
+} */
