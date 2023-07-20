@@ -126,7 +126,7 @@ button {
     background: url(../image/button-icon2.svg), #9571D2;
     background-size: inherit;
     background-repeat: no-repeat;
-    background-position: 70px;
+    background-position: 80px;
     transition: all 0.5s;
 }
 
@@ -2047,6 +2047,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background-position: right;
 }
 
 .footer-flex {
@@ -2537,16 +2538,103 @@ footer {
     width: inherit;
 }
 
+.thank-you-body:after {
+   content: none;
+}
+.main {
+    margin-top: 76px;
+}
+.main-container .wrapper{
+    margin: 0 auto;
+    max-width: 1116px;
+    display: flex;
+    align-items: center;
+}
+.main-container-left {
+    width: 545.997px;
+    min-width: 545.997px;
+    height: 496.167px;
+    margin-right: 24px;
+}
+.main-container-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.main-container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+}
+.main-container-right h1 {
+    color: #F7F1FF;
+    font-family: ActayWide-Bold, sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 356px;
+}
+.main-container-right p {
+    color:#F4F3F5;
+    font-family: Actay-Regular, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.main-container-right a {
+    border-radius: 4px;
+    background:url(../image/back.svg),#704FAD;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 18px 15px;
+    display: flex;
+    padding-left: 56px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 276px;
+    max-width: 276px;
+    box-sizing: border-box;
+    height: 52px;
+    border: none;
+    text-decoration: none;
+    color: #F7F1FF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+}
 
+.main-container-right button:hover {
+    background: url(../image/back.svg), #9571D2;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 18px 15px;
+    transition: all 0.5s;
+}
 
-
-
-
-
-
-
-
-
+.main-container-right button:active {
+    background: url(../image/back.svg), #5D4191;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 18px 15px;
+    transition: all 0.5s;
+}
+.main-container {
+    padding: 128px 0;
+    background: url(../image/Thank.svg), #403650;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: right;
+    
+}
 
 
 
@@ -4274,7 +4362,72 @@ footer {
         max-width: 216px;
         width: auto;
     }
-
+.main-container {
+    display: flex;
+    min-width: 100%;
+    max-width: 1199px;
+    padding: 64px 32px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 24px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.main-container .wrapper {
+    display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+gap: 24px;
+align-self: stretch;
+flex-wrap: wrap;
+box-sizing: border-box;
+}
+.main-container {
+    background: #403650;
+}
+.main-container-left {
+    width: 256px;
+    height: 232.637px;
+    min-width: 256px;
+}
+.main-container-right {
+    display: flex;
+min-width: 256px;
+max-width: 512px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 32px;
+flex: 1 0 0;
+}
+.main-container-right h1 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    max-width: 356px;
+}
+.main-container-right p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 0.28px;
+    text-align: center;
+}
+.main-container-right a {
+    width: 244px;
+    height: 44px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    background-position: 18px 12px;
+}
 }
 
 @media (max-width: 576px) {
