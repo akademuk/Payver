@@ -2265,7 +2265,7 @@ footer {
 }
 
 .popup {
-    position: absolute;
+    position: fixed;
     bottom: -100%;
     right: 5%;
     display: flex;
