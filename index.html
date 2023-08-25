@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="image/favicon.png">
+    <link rel="stylesheet" href="style/avnSkeleton.css">
     <link rel="stylesheet" href="style/slick.css">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script/avnPlugin.js"></script>
+    <script src="script/avnSkeleton.js"></script>
     <title>Payver</title>
 </head>
 
 <body>
-    <div class="body-position">
-        <div class="body-position-item1"></div>
-        <div class="body-position-item2"></div>
-        <div class="body-position-item3"></div>
-        <div class="body-position-item4"></div>
-        <div class="body-position-item5"></div>
-        <div class="body-position-item6"></div>
-    </div>
     <div class="popup" id="popup">
        <div class="popup-content">
         <div class="popup-close">
@@ -37,32 +32,32 @@
         </div>
        </div>
     </div>
-    <main>
+    <main class="scelet">
 
         <header>
             <div class="header-wrapper">
-                <div class="logo">
+                <div class="logo skeleton">
                     <a href="#">
-                        <img src="image/Logo.svg" alt="Payver">
+                        <img src="image/Logo.svg" alt="Payver" class="skeleton">
                     </a>
                 </div>
                 <ul class="header-navigation">
                     <li>
-                        <a href="#">Features</a>
+                        <a href="#" class="skeleton">Features</a>
                     </li>
                     <li>
-                        <a href="#">Corporate account</a>
+                        <a href="#" class="skeleton">Corporate account</a>
                     </li>
                     <li>
-                        <a href="#">Pricing</a>
+                        <a href="#" class="skeleton">Pricing</a>
                     </li>
                     <li>
-                        <a href="#">stages</a>
+                        <a href="#" class="skeleton">stages</a>
                     </li>
                 </ul>
                 <div class="header-group-button">
-                    <button>open account</button>
-                    <button>Sign in</button>
+                    <button class="skeleton">open account</button>
+                    <button class="skeleton">Sign in</button>
                 </div>
                 <div class="burger-icon">
                     <div class="burger-line"></div>
@@ -95,7 +90,7 @@
 
         <section class="banner">
             <div class="banner-wrapper">
-                <div class="banner-left">
+                <div class="banner-left skeleton">
                     <div class="banner-slider">
                         <div class="banner-item">
                             <div class="banner-item-left">
@@ -171,7 +166,7 @@
                     </div>
                     <div class="banner-slider-dots"></div>
                 </div>
-                <div class="banner-right">
+                <div class="banner-right skeleton">
                     <span>Powered by</span>
                     <div class="banner-right-logo">
                         <img src="image/big-logo.svg" alt="Payver">
@@ -185,7 +180,7 @@
 
         <section class="digital-payments">
             <div class="wrapper">
-                <div class="digital-payments-top">
+                <div class="digital-payments-top skeleton">
                     <div class="digital-payments-top-flex">
                         <h2>A New Standardin Digital Payments</h2>
                         <p>Process global payments with ease. Let your business be your focus. Increase payment
@@ -195,7 +190,7 @@
                     <button class="btn-arrow">New Account</button>
                 </div>
                 <div class="digital-payments-main">
-                    <div class="digital-payments-main-container">
+                    <div class="digital-payments-main-container skeleton">
                         <div class="digital-payments-main-container-icon">
                             <img src="image/digital-icon1.svg" alt="One-Tap Payment Solutions">
                         </div>
@@ -204,7 +199,7 @@
                             intuitive in-app experience for customers and a sophisticated monitoring and management app
                             for the merchants</p>
                     </div>
-                    <div class="digital-payments-main-container">
+                    <div class="digital-payments-main-container skeleton">
                         <div class="digital-payments-main-container-icon">
                             <img src="image/digital-icon2.svg" alt="Risk Management">
                         </div>
@@ -213,7 +208,7 @@
                             real-time decisions based on machine learning, predictive analysis, and business rule
                             algorithms</p>
                     </div>
-                    <div class="digital-payments-main-container">
+                    <div class="digital-payments-main-container skeleton">
                         <div class="digital-payments-main-container-icon">
                             <img src="image/digital-icon3.svg" alt="Automated Reconciliation">
                         </div>
@@ -221,7 +216,7 @@
                         <p>Say good-bye to inefficient manual reconciliation. Automate reconciliation and settlement
                             processes with Payver</p>
                     </div>
-                    <div class="digital-payments-main-container">
+                    <div class="digital-payments-main-container skeleton">
                         <div class="digital-payments-main-container-icon">
                             <img src="image/digital-icon4.svg" alt="QR And Payment Link">
                         </div>
@@ -230,7 +225,7 @@
                             paid instantly. Embed QR codes or links in all your social online and offline campaigns. No
                             coding required</p>
                     </div>
-                    <div class="digital-payments-main-container">
+                    <div class="digital-payments-main-container skeleton">
                         <div class="digital-payments-main-container-icon">
                             <img src="image/digital-icon5.svg" alt="Intelligent Routing">
                         </div>
@@ -238,7 +233,7 @@
                         <p>Control your flow. Route transactions between multiple acquirers with flexibility. Save money
                             on the FX and processing fees while increasing your acceptance rates</p>
                     </div>
-                    <div class="digital-payments-video-container">
+                    <div class="digital-payments-video-container skeleton">
                         <video autoplay muted loop preload="auto" playsinline class="autoplay-video">
                             <source src="image/payver.mp4" type="video/mp4">
                         </video>
@@ -737,7 +732,7 @@
     </main>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="script/jquery.maskedinput.min.js"></script>
     <script src="script/jquery.validate.min.js"></script>
     <script src="script/slick.js"></script>
@@ -746,6 +741,15 @@
     <script src="script/popup.js"></script>
     <script src="script/form-validation.js"></script>
 
+    <script>
+        const allSkeleton = document.querySelectorAll('.skeleton')
+
+window.addEventListener('load', function() {
+  allSkeleton.forEach(item=> {
+    item.classList.remove('skeleton')
+  })
+})
+    </script>
 </body>
 
 </html>
