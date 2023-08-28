@@ -258,7 +258,7 @@
 
 
     <script>
-       $(document).ready(function() {
+  $(document).ready(function() {
       $("#openPopup").click(function() {
         $("#popup-holidays").fadeIn();
       });
@@ -273,6 +273,12 @@
         const tabIndex = $(this).index();
         $(".tab-pane").removeClass("active");
         $(".tab-pane").eq(tabIndex).addClass("active");
+      });
+
+      $("#popup-holidays, .popup-holidays-flex").click(function(e) {
+        if (e.target.id === "popup-holidays") {
+          $(this).fadeOut();
+        }
       });
     });
     </script>
